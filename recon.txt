@@ -1,0 +1,37 @@
+linktr.ee
+
+basic (whois)
+
+
+Registrant:
+name:       Linktree Pty Ltd
+org id:     608 721 562
+
+Registrar:
+name:       Zone Media OÜ
+url:        http://www.zone.ee
+phone:      +372 6886886
+changed:    2020-07-01 13:55:58 +03:00
+
+Country : belguim
+
+Name servers:
+nserver:   ns-634.awsdns-15.net
+nserver:   ns-1782.awsdns-30.co.uk
+nserver:   ns-1534.awsdns-63.org
+nserver:   ns-169.awsdns-21.com
+
+
+
+
+linktr.ee ->151.101.130.133
+ownership :Fastly, Inc {SKYCA-3}
+""proxy"""
+
+
+
+
+server varnish
+
+edge ip : 148.74.204.51
+ownership : Optimum Online {OPTO}
