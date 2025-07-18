@@ -1,0 +1,49 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Multiple IPs found: 151.101.2.133, 151.101.194.133, 151.101.130.133, 151.101.66.133
++ Target IP:          151.101.2.133
++ Target Hostname:    linktr.ee
++ Target Port:        80
++ Start Time:         2025-07-18 00:05:18 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Varnish
++ /: Cookie countryCode created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie ipOverride created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: IP address found in the 'ipOverride' cookie. The IP is "148.74.204.51".
++ /: Cookie city created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Cookie region created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Retrieved via header: 1.1 varnish.
++ /: Retrieved x-served-by header: cache-ewr-kewr1740061-EWR.
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: Fastly CDN was identified by the x-timer header. See: https://www.fastly.com/
++ /: Uncommon header 'country-code' found, with contents: US.
++ /: Uncommon header 'x-served-by' found, with contents: cache-ewr-kewr1740061-EWR.
++ /: Uncommon header 'x-lt-cache' found, with contents: E-HIT.
++ /: Uncommon header 'city' found, with contents: bridgeport.
++ /: Uncommon header 'continent-code' found, with contents: NA.
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ Root page / redirects to: https://linktr.ee/
++ /2s1Vc02L.java: Uncommon header 'client-geo-region' found, with contents: region-other.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ 7962 requests: 0 error(s) and 16 item(s) reported on remote host
++ End Time:           2025-07-18 00:09:40 (GMT-4) (262 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+
+
+
+
+targets : 151.101.2.133, 151.101.194.133, 151.101.130.133, 151.101.66.133
+
+domain == multiple IPs (may be edge or loadbalancer)
+
+/2s1Vc02L.java: Uncommon header 'client-geo-region' found, with contents: region-other. <- file liked or false positive? 
+
+coockie investigation  ==> sensitive?
+
+The anti-clickjacking X-Frame-Options header is not present =>> try clickjacking if have testing credentails (possible XSS)
+
+
+
